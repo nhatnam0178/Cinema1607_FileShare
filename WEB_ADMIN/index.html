@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>themelock.com - Smarty Admin</title>
+<meta name="description" content="" />
+<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+<!-- mobile settings -->
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+<!-- WEB FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css" />
+
+<!-- CORE CSS -->
+<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+<!-- THEME CSS -->
+<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+</head>
+<!--
+		.boxed = boxed version
+	-->
+<body>
+
+<!-- WRAPPER -->
+<div id="wrapper" class="clearfix"> 
+  
+  <!-- 
+				ASIDE 
+				Keep it outside of #wrapper (responsive purpose)
+			-->
+  <aside id="aside"> 
+    <!--
+					Always open:
+					<li class="active alays-open">
+
+					LABELS:
+						<span class="label label-danger pull-right">1</span>
+						<span class="label label-default pull-right">1</span>
+						<span class="label label-warning pull-right">1</span>
+						<span class="label label-success pull-right">1</span>
+						<span class="label label-info pull-right">1</span>
+				-->
+    <nav id="sideNav"><!-- MAIN MENU -->
+      <ul class="nav nav-list">
+        <li class="active"><!-- dashboard --> 
+          <a class="dashboard" href="index.html"><!-- warning - url used by default by ajax (if eneabled) --> 
+          <i class="main-icon fa fa-dashboard"></i> <span>Dashboard</span> </a> </li>
+        <li> <a href="#"> <i class="fa fa-menu-arrow pull-right"></i> <i class="main-icon fa fa-bar-chart-o"></i> <span>MOVIE GENRE</span> </a>
+          <ul>
+            <!-- Load Tu DATABASE -->
+            <li><a href="#">ACTION</a></li>
+            <li><a href="#">COMEDY</a></li>
+            <li><a href="#">CARTTOON</a></li>
+            <li><a href="#">FAMILY</a></li>
+            <li><a href="#">MARTIAL ARTS</a></li>
+          </ul>
+        </li>
+        <li> <a href="#"> <i class="fa fa-menu-arrow pull-right"></i> <i class="main-icon fa fa-table"></i> 
+			<span>MOVIE SCHEDULE</span> </a>
+          <ul>
+            <!-- submenus -->
+            <li><a href="tables-bootstrap.html">Load Movie SCHEDULE 1</a></li>
+            <li><a href="tables-jqgrid.html">Load Movie SCHEDULE 2</a></li>
+            <li><a href="tables-footable.html">Load Movie SCHEDULE 3</a></li>
+            <li> <a href="#"> <i class="fa fa-menu-arrow pull-right"></i> Datatables </a>
+              <ul>
+                <li><a href="tables-datatable-managed.html">Managed Datatables</a></li>
+                <li><a href="tables-datatable-editable.html">Editable Datatables</a></li>
+                <li><a href="tables-datatable-advanced.html">Advanced Datatables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li> <a href="#"> <i class="fa fa-menu-arrow pull-right"></i> <i class="main-icon fa fa-pencil-square-o"></i> <span>MANAGE ACCOUNT</span> </a>
+          <ul>
+            <!-- submenus -->
+            <li><a href="#">ADMIN</a></li>
+            <li><a href="#">EMPLOYEE</a></li>
+			<li><a href="#">USER</a></li>
+          </ul>
+        </li>
+        <li> <a href="#"> <i class="fa fa-menu-arrow pull-right"></i> <i class="main-icon fa fa-gears"></i> <span>MANAGE CINEMA</span> </a>
+          <ul>
+            <!-- submenus -->
+            <li><a href="#">LOAD CINEMA From DATABASE 1</a></li>
+			  <!-- Load danh sách Ghế  / Kèm theo thẻ Status-->
+            <li><a href="#">LOAD CINEMA From DATABASE 2</a></li>
+			  <!-- Load danh sách Ghế  / Kèm theo thẻ Status-->
+            <li><a href="#">LOAD CINEMA From DATABASE 3</a></li>
+			  <!-- Load danh sách Ghế  / Kèm theo thẻ Status-->           
+          </ul>
+        </li>
+        <li> <a href="#"> <i class="fa fa-menu-arrow pull-right"></i> <i class="main-icon fa fa-book"></i> <span>CB CORN&DRINKS</span> </a>          
+        </li>
+      </ul>
+      
+      <!-- SECOND MAIN LIST -->
+      <h3>MORE</h3>
+      <ul class="nav nav-list">
+        <li> <a href="calendar.html"> <i class="main-icon fa fa-calendar"></i> <span class="label label-warning pull-right">2</span> <span>Calendar</span> </a> </li>
+        <li> <a href="../../HTML/start.html"> <i class="main-icon fa fa-link"></i> <span class="label label-danger pull-right">PRO</span> <span>Frontend</span> </a> </li>
+      </ul>
+    </nav>
+    <span id="asidebg"><!-- aside fixed background --></span> </aside>
+  <!-- /ASIDE --> 
+  
+  <!-- HEADER -->
+  <header id="header">
+    <!-- Mobile Button -->
+    <button id="mobileMenuBtn"></button>
+    
+    <!-- Logo --> 
+    <span class="logo pull-left"> <img src="assets/images/LOGO_cinema.jpg" alt="admin panel" height="35" /> </span>
+    <form method="get" action="page-search.html" class="search pull-left hidden-xs">
+      <input type="text" class="form-control" name="k" placeholder="Search for something..." />
+    </form>
+    <nav> 
+      
+      <!-- OPTIONS LIST -->
+      <ul class="nav pull-right">
+        
+        <!-- USER OPTIONS -->
+        <li class="dropdown pull-left"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> <img class="user-avatar" alt="" src="assets/images/noavatar.jpg" height="34" /> <span class="user-name"> <span class="hidden-xs"> John Doe <i class="fa fa-angle-down"></i> </span> </span> </a>
+          <ul class="dropdown-menu hold-on-click">
+            <li><!-- my calendar --> 
+              <a href="calendar.html"><i class="fa fa-calendar"></i> Calendar</a> </li>
+            <li><!-- my inbox --> 
+              <a href="#"><i class="fa fa-envelope"></i> Inbox <span class="pull-right label label-default">0</span> </a> </li>
+            <li><!-- settings --> 
+              <a href="page-user-profile.html"><i class="fa fa-cogs"></i> Settings</a> </li>
+            <li class="divider"></li>
+            <li><!-- lockscreen --> 
+              <a href="page-lock.html"><i class="fa fa-lock"></i> Lock Screen</a> </li>
+            <li><!-- logout --> 
+              <a href="page-login.html"><i class="fa fa-power-off"></i> Log Out</a> </li>
+          </ul>
+        </li>
+        <!-- /USER OPTIONS -->
+        
+      </ul>
+      <!-- /OPTIONS LIST --> 
+      
+    </nav>
+  </header>
+  <!-- /HEADER --> 
+  
+  <!-- 
+				MIDDLE 
+			-->
+  <section id="middle">
+    <div id="content" class="dashboard padding-20"> 
+      
+      <!-- 
+						PANEL CLASSES:
+							panel-default
+							panel-danger
+							panel-warning
+							panel-info
+							panel-success
+
+						INFO: 	panel collapse - stored on user localStorage (handled by app.js _panels() function).
+								All pannels should have an unique ID or the panel collapse status will not be stored!
+					--><!-- /PANEL --> 
+      
+      <!-- BOXES --><!-- /BOXES -->
+      
+      <div class="row"> </div>
+    </div>
+  </section>
+  <!-- /MIDDLE --> 
+  
+</div>
+
+<!-- JAVASCRIPT FILES --> 
+<script type="text/javascript">var plugin_path = 'assets/plugins/';</script> 
+<script type="text/javascript" src="assets/plugins/jquery/jquery-2.1.4.min.js"></script> 
+<script type="text/javascript" src="assets/js/app.js"></script> 
+
+<!-- PAGE LEVEL SCRIPT --> 
+
+<!-- STYLESWITCHER - REMOVE --> 
+<script async type="text/javascript" src="assets/plugins/styleswitcher/styleswitcher.js"></script>
+</body>
+</html>
